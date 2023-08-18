@@ -1,7 +1,9 @@
 {
   "scripts": {
     "dev": "nodemon ./src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf ./build && tsc",
+    "start": "pnpm run build && node ./build/index.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
